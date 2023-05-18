@@ -1,0 +1,105 @@
+.cartpage {
+  &--content {
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+
+    &__price,
+    &__quan,
+    &__money,
+    &__action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 2;
+      color: #888;
+    }
+    &__price {
+      flex: 3;
+    }
+    &__product {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex: 8;
+      img {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border: 1px solid rgb(203, 203, 203);
+      }
+    }
+    &__price {
+      gap: 1rem;
+      span {
+        font-size: 1.6rem;
+        color: var(--text-color);
+        &:first-child {
+          text-decoration: line-through;
+          color: #0000008a;
+        }
+      }
+    }
+    &__quan {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &-incre,
+      &-decre {
+        width: 3.2rem;
+        height: 3.2rem;
+        color: var(--text-color);
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      &-num {
+        width: 5.5rem;
+        height: 3.2rem;
+        border-left: 0;
+        border-right: 0;
+        font-size: 1.6rem;
+        font-weight: 400;
+        box-sizing: border-box;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        cursor: text;
+        &:focus-within {
+          background: var(--second);
+        }
+        input {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          padding: 0rem 1rem 0 1.7rem;
+        }
+      }
+    }
+    &__money {
+      color: var(--primary);
+    }
+    &__action {
+      color: var(--text-color);
+      cursor: pointer;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}

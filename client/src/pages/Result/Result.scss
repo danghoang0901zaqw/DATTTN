@@ -1,0 +1,13 @@
+@import "~src/components/GlobalStyles/GlobalStyles.scss";
+
+.result {
+  padding: 5rem 12rem;
+  @include mobile() {
+    flex-direction: column;
+    padding: 0;
+  }
+  @include tablet() {
+    flex-direction: column;
+    padding: 3.5rem 2rem;
+  }
+}

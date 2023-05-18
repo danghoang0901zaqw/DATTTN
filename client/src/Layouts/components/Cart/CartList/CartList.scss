@@ -1,0 +1,82 @@
+@import "~src/components/GlobalStyles/GlobalStyles.scss";
+
+.cart--content {
+  position: absolute;
+  top: 7.5rem;
+  right: 6rem;
+  box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  background-color: var(--white);
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: default;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  @include mobile() {
+    position: fixed;
+    top: $header-mobile-height;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  @include tablet() {
+    position: fixed;
+    top: $header-tablet-height;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1rem solid var(--white);
+    border-left: 1.4rem solid transparent;
+    border-right: 1.4rem solid transparent;
+    top: -1rem;
+    right: 2rem;
+    z-index: 2;
+    @include mobile() {
+      display: none;
+    }
+    @include tablet() {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 40rem;
+    height: 2rem;
+  }
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #00000042;
+    height: 4rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-height: 45vh;
+    overflow: scroll;
+  }
+  &__total {
+    padding: 1rem;
+    text-align: right;
+    color: var(--text-color);
+    span {
+      font-size: 1.8rem;
+    }
+  }
+  a {
+    color: var(--primary) !important;
+  }
+}

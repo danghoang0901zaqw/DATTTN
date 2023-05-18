@@ -1,0 +1,133 @@
+@import "~src/components/GlobalStyles/GlobalStyles.scss";
+
+.main {
+  background: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.form {
+  width: 70vw;
+  min-height: 100px;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 2px;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+  &--group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    &__message {
+      height: 200px;
+      textarea {
+        height: 200px;
+      }
+    }
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 2rem;
+      label {
+        padding: 0;
+      }
+      input {
+        width: 2rem;
+      }
+    }
+    input[type="file"] {
+      border: none;
+    }
+  }
+  &--label {
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 6px;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+  }
+  &--message {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+  }
+  &--control {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.4rem;
+    &:hover {
+      border-color: #48c6ef;
+    }
+  }
+
+  &--submit {
+    outline: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      var(--primary);
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+      background-color: #48c6ef;
+    }
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .desc {
+    text-align: center;
+    color: #636d77;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    line-height: 2.4rem;
+    margin-top: 16px;
+    font-weight: 300;
+  }
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  &--content {
+    display: flex;
+    position: relative;
+    img {
+      width: 14rem;
+      height: 14rem;
+      object-fit: cover;
+      @include mobile() {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+    svg {
+      z-index: 2;
+      position: absolute;
+      color: var(--white);
+      right: 4px;
+      top: 4px;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgb(168, 168, 168);
+      cursor: pointer;
+    }
+  }
+}
+.spacer {
+  margin-top: 36px;
+}

@@ -1,0 +1,95 @@
+@import "normalize.css";
+:root {
+  --primary: #6f86d6;
+  --black: #000;
+  --white: #fff;
+  --text-color: #161823;
+  --font-family: "ProximaNova", sans-serif;
+  --background: #eff2f5;
+  --second: #1977f2;
+}
+$mobile-max-width: 739px;
+$tablet-min-width: 740px;
+$tablet-max-width: 1023px;
+$header-mobile-height: 70px;
+$header-tablet-height: 100px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  text-rendering: optimizeSpeed;
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url("../../assets/fonts/Proxima-Nova-Regular.woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("../../assets/fonts/ProximaNova-Semibold.woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("../../assets/fonts/Proxima-Nova-Bold.woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: SofiaPro;
+  src: url("../../assets/fonts/sofiapro-bold.woff");
+  font-weight: 700;
+}
+
+button,
+input,
+[tabindex] {
+  border: none;
+  outline: none;
+}
+a[href] {
+  text-decoration: none;
+  color: var(--text-color);
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    @content;
+  }
+}

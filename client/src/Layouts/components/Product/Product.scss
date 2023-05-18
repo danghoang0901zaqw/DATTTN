@@ -1,0 +1,79 @@
+.home {
+  &--product {
+    &__wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+    &__info {
+      font-size: 1.4rem;
+      color: var(--text-color);
+      line-height: 1.8rem;
+      margin: 1rem 1rem 0.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    &__name {
+      font-size: 1.6rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      text-overflow: ellipsis;
+    }
+    &__desc {
+      font-size: 1.4rem;
+      color: #737373;
+      font-weight: 400;
+      line-height: 1.8rem;
+      margin-top: 0.5rem;
+      min-height: 3.6rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+    }
+    &__price {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+      &-old {
+        font-size: 1.5rem;
+        color: #666;
+        text-decoration: line-through;
+      }
+      &-new {
+        color: var(--primary);
+      }
+    }
+    &__action,
+    &__rate {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    &__vote {
+      svg {
+        width: 1.4rem;
+        color: #ffce3d;
+      }
+    }
+
+    &__origin {
+      display: flex;
+      justify-content: space-between;
+      color: #595959;
+      font-size: 1.2rem;
+      font-weight: 300;
+      &-name {
+        font-size: 1.2rem;
+        color: var(--text-color);
+      }
+    }
+  }
+}

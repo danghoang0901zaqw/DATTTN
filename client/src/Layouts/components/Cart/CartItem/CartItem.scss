@@ -1,0 +1,71 @@
+@import "~src/components/GlobalStyles/GlobalStyles.scss";
+
+.cart--content {
+  &__item {
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    @include tablet{
+      justify-content: space-between;
+    }
+    &:hover {
+      background: #e7e7e7;
+    }
+    img {
+      width: 4.5rem;
+      height: 4.5rem;
+      object-fit: cover;
+      border: 1px solid rgba(0, 0, 0, 0.09);
+    }
+  }
+  &__name {
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-height: 4rem;
+    font-weight: 500;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  &__desc {
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    max-height: 4rem;
+    font-weight: 500;
+    color: #787878;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  &__info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  &__price {
+    color: var(--primary);
+  }
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
